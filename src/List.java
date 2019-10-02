@@ -41,14 +41,6 @@ public class List {
   }
 
   /**
-   * Set the value of m_head
-   * @param newVar the new value of m_head
-   */
-  private void setHead ( Item newVar ) {
-    head = newVar;
-  }
-
-  /**
    * Get the value of m_head
    * @return the value of m_head
    */
@@ -73,6 +65,20 @@ public class List {
    */
   public void append( String data )
   {
+    Item item = new Item(); // neues Item Objekt für die Liste
+    item.setData(data);     // Daten in Objekt ablegen
+    item.setNext(null);     // Item hat keinen Nachfolger
+
+    if( head == null ) { // Sonderfall: leere Liste?
+      head = item;
+    } else {
+      // Bedingung: tmp.getNext() == null
+      Item tmp = head; // Start der Liste in tmp sichern
+      while (tmp.getNext() != null) { // letztes Element?
+        tmp = tmp.getNext(); // nächstes Element auswählen
+      }
+      tmp.setNext(item);
+    }
   }
 
 
@@ -87,15 +93,8 @@ public class List {
    */
   public void rewind(  )
   {
+      current = head;
   }
 
-
-  /**
-   * @return       String
-   */
-  public String getNext(  )
-  {
-    return null;
-  }
 
 }
