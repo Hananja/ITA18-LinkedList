@@ -28,7 +28,7 @@ public class Item {
    * Set the value of data
    * @param newVar the new value of data
    */
-  private void setData ( String newVar ) {
+  public void setData(String newVar) {
     data = newVar;
   }
 
@@ -36,7 +36,7 @@ public class Item {
    * Get the value of data
    * @return the value of data
    */
-  private String getData ( ) {
+  public String getData ( ) {
     return data;
   }
 
