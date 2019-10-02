@@ -32,8 +32,12 @@ public class List {
    * Get the value of head
    * @return the value of head
    */
-  public Item getHead ( ) {
-    return head;
+  public String getHead ( ) {
+    if( head != null ) {
+      return head.getData();
+    } else {
+      return null;
+    }
   }
 
   /**
