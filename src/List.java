@@ -12,8 +12,8 @@ public class List {
    * Set the value of current
    * @param newVar the new value of current
    */
-  private void setCurrent ( Item newVar ) {
-    current = newVar;
+  private void setCurrent ( String newVar ) {
+    current.setData(newVar);
   }
 
   /**
@@ -21,7 +21,11 @@ public class List {
    * @return the value of current
    */
   public String getCurrent ( ) {
-    return current.getData();
+    if( current != null) {
+      return current.getData();
+    } else {
+      return null;
+    }
   }
 
   /**
@@ -38,6 +42,10 @@ public class List {
    */
   public void insert( String data )
   {
+    Item item = new Item();
+    item.setData(data);
+    item.setNext(head);
+    head = item;
   }
 
 
@@ -86,21 +94,27 @@ public class List {
    * Delete item, that is successor of current
    */
   public void deleteNext() {
-    // TODO
+    if (current != null && current.getNext() != null) {
+      current.setNext(current.getNext().getNext());
+    }
   }
 
   /**
    * Delete first item of list
    */
   public void deleteFirst() {
-    // TODO
+    if( head != null ) {
+      head = head.getNext();
+    }
   }
 
   /**
    * Set current to next item
    */
   public void step() {
-   // TODO
+   if(current != null) {
+     current = current.getNext();
+   }
   }
 
 }
