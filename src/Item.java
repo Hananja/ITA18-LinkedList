@@ -8,6 +8,12 @@ public class Item {
   
   public Item () { }
 
+  public String toString() {
+    return "Item{" +
+            "data='" + data + '\'' +
+            '}';
+  }
+
   /**
    * Set the value of data
    * @param newVar the new value of data

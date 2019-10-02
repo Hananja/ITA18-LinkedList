@@ -9,30 +9,31 @@ public class List {
   public List () { };
   
   /**
-   * Set the value of m_current
-   * @param newVar the new value of m_current
+   * Set the value of current
+   * @param newVar the new value of current
    */
   private void setCurrent ( Item newVar ) {
     current = newVar;
   }
 
   /**
-   * Get the value of m_current
-   * @return the value of m_current
+   * Get the value of current
+   * @return the value of current
    */
-  private Item getCurrent ( ) {
-    return current;
+  public String getCurrent ( ) {
+    return current.getData();
   }
 
   /**
-   * Get the value of m_head
-   * @return the value of m_head
+   * Get the value of head
+   * @return the value of head
    */
-  private Item getHead ( ) {
+  public Item getHead ( ) {
     return head;
   }
 
   /**
+   * Insert Item at beginning of list
    * @param        data Data to store
    */
   public void insert( String data )
@@ -41,6 +42,7 @@ public class List {
 
 
   /**
+   * Append item to list at the end
    * @param        data Data to store
    */
   public void append( String data )
@@ -63,18 +65,42 @@ public class List {
 
 
   /**
+   * Delete current item.
    */
   public void delete(  )
   {
+      // TODO
   }
 
 
   /**
+   * Rewinds the list by setting current to head.
    */
   public void rewind(  )
   {
       current = head;
   }
 
+
+  /**
+   * Delete item, that is successor of current
+   */
+  public void deleteNext() {
+    // TODO
+  }
+
+  /**
+   * Delete first item of list
+   */
+  public void deleteFirst() {
+    // TODO
+  }
+
+  /**
+   * Set current to next item
+   */
+  public void step() {
+   // TODO
+  }
 
 }
