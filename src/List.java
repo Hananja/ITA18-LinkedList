@@ -1,29 +1,13 @@
 /**
- * Class List
+ * Class List encapsulates a list of Items.
  */
 public class List {
-
-  //
-  // Fields
-  //
 
   private Item current;
   private Item head;
   
-  //
-  // Constructors
-  //
   public List () { };
   
-  //
-  // Methods
-  //
-
-
-  //
-  // Accessor methods
-  //
-
   /**
    * Set the value of m_current
    * @param newVar the new value of m_current
@@ -48,12 +32,8 @@ public class List {
     return head;
   }
 
-  //
-  // Other methods
-  //
-
   /**
-   * @param        data
+   * @param        data Data to store
    */
   public void insert( String data )
   {
@@ -61,7 +41,7 @@ public class List {
 
 
   /**
-   * @param        data
+   * @param        data Data to store
    */
   public void append( String data )
   {

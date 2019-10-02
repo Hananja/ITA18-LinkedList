@@ -1,28 +1,12 @@
 /**
- * Class Item
+ * Class Item encapsulates a list entry item
  */
 public class Item {
-
-  //
-  // Fields
-  //
 
   private String data;
   private Item next;
   
-  //
-  // Constructors
-  //
-  public Item () { };
-  
-  //
-  // Methods
-  //
-
-
-  //
-  // Accessor methods
-  //
+  public Item () { }
 
   /**
    * Set the value of data
@@ -39,10 +23,6 @@ public class Item {
   public String getData ( ) {
     return data;
   }
-
-  //
-  // Other methods
-  //
 
   /**
    * @return       Item
